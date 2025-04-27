@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CollegeFeedbackSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="StudentName" Type="varchar" MaxLength="50" />
+    <Property Name="FeedbackType" Type="varchar" MaxLength="50" />
+    <Property Name="FeedbackText" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="userregistration">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="uname" Type="varchar" MaxLength="50" />
+    <Property Name="uemail" Type="varchar" MaxLength="50" />
+    <Property Name="upass" Type="varchar" MaxLength="50" />
+    <Property Name="cpass" Type="varchar" MaxLength="50" />
+    <Property Name="crole" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CollegeFeedbackSystemModelStoreContainer">
+    <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userregistration" EntityType="Self.userregistration" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

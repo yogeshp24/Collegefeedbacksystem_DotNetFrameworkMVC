@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CollegeFeedbackSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FeedbackType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FeedbackText" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userregistration">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="uname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uemail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="upass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cpass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="crole" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="CollegeFeedbackSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="feedbacks" EntityType="Self.feedback" />
+    <EntitySet Name="userregistrations" EntityType="Self.userregistration" />
+  </EntityContainer>
+</Schema>

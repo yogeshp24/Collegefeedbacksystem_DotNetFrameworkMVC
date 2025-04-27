@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CollegeFeedbackSystemModelStoreContainer" CdmEntityContainer="CollegeFeedbackSystemEntities">
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="CollegeFeedbackSystemModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="FeedbackType" ColumnName="FeedbackType" />
+          <ScalarProperty Name="FeedbackText" ColumnName="FeedbackText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userregistrations">
+      <EntityTypeMapping TypeName="CollegeFeedbackSystemModel.userregistration">
+        <MappingFragment StoreEntitySet="userregistration">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="uemail" ColumnName="uemail" />
+          <ScalarProperty Name="upass" ColumnName="upass" />
+          <ScalarProperty Name="cpass" ColumnName="cpass" />
+          <ScalarProperty Name="crole" ColumnName="crole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
